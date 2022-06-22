@@ -37,20 +37,20 @@ const vote = () =>{
               const [count,setCount] = useState(1);
               const [votes,setVotes] = useState(750);
               return(
-              <span className="flex items-center flex-col gap-6 p-6 shadow-xl hover:shadow-2xl group transition-all duration-500 ease-in cursor-pointer">
+              <span className="flex items-center flex-col gap-6 p-6 shadow-xl hover:shadow-2xl group transition-all duration-500 ease-in cursor-pointer select-none">
               <span className="w-24 h-24 rounded-full bg-[#1F0231] shadow-xl shadow-[#1F0231]/30 hover:shadow-2xl"></span>
                 <span>{data.name}</span>
                 <span>{votes} votes</span>
                 <div className="flex items-center mx-auto mt-8 w-fit h-fit">
             <label className="w-full relative block mx-auto">
                 <span className="absolute inset-y-0 left-2 flex items-center pl-2">
-                <svg  onClick={()=>{setCount((num)=>num+1)}}className="h-1 w-5 cursor-pointer" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  onClick={()=>{setCount((num)=>num-1)}}className="h-1 w-5 cursor-pointer" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.375 2H0.625C0.45924 2 0.300269 1.89464 0.183058 1.70711C0.0658481 1.51957 0 1.26522 0 1C0 0.734784 0.0658481 0.48043 0.183058 0.292893C0.300269 0.105357 0.45924 0 0.625 0H9.375C9.54076 0 9.69973 0.105357 9.81694 0.292893C9.93415 0.48043 10 0.734784 10 1C10 1.26522 9.93415 1.51957 9.81694 1.70711C9.69973 1.89464 9.54076 2 9.375 2Z" fill="#3E0563"/>
 </svg>
 
                 </span>
                   <input type="text" className="block bg-white py-2 pl-12 pr-3 w-24 shadow-sm outline-none h-[auto] align-middle my-auto rounded-l-md h-max border-2  border-[#3E0563]" value={count} disabled/>
-                <span className="absolute inset-y-0 right-2 flex items-center pr-2"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <span onClick={()=>{setCount((num)=>num+1)}} className="absolute inset-y-0 right-2 flex items-center pr-2"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6 11V1" stroke="#3E0563" stroke-width="2" stroke-linecap="round"/>
 <path d="M1 6H11" stroke="#3E0563" stroke-width="2" stroke-linecap="round"/>
 </svg>
