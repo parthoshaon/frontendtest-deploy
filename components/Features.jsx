@@ -75,8 +75,8 @@ const Features = () => {
           <h1 className="text-xl font-bold">Our Target</h1>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8 w-full h-auto overflow-hidden">
             {
-                feature.map((feature,i)=>(
-                    <div className="flex flex-col items-center rounded border-2 border-[#735786] p-8 gap-6 h-auto" key={feature.text}  data-aos={`slide-${ i % 2 != 0 ? `up` : `down`}`}>
+                feature.map((feature)=>(
+                    <div className="flex flex-col items-center rounded border-2 border-[#735786] p-8 gap-6 h-auto" key={feature.text}>
                         <span className="w-24 h-24 ">{feature.icon}</span>
                         <span className="mt-auto font-bold">{feature.text}</span>
                     </div>
