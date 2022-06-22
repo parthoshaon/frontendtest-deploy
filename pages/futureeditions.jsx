@@ -27,8 +27,8 @@ const futureeditions = () => {
     <>
     <Navbar  loggedIn={state}/>
       <div className="flex flex-col items-center content mt-12">
-      <h1 className="text-center lg:text-3xl text-xl font-medium text-[#0c0114]">Celebated Techies</h1>
-        <p className="text-center lg:text-xl text-lg font-medium text-[#808080]">A look into some of our past winners</p>
+      <h1 className="text-center lg:text-3xl text-xl font-medium text-[#0c0114]">Future Editions</h1>
+        <p className="text-center lg:text-xl text-lg font-medium text-[#808080]">Nominate candidates for future editions</p>
           <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8 lg:p-12 md:p-8 p-6">
           {data.map((data)=>(
             <span className="flex items-center flex-col gap-6 p-6 shadow-xl hover:shadow-2xl group transition-all duration-500 ease-in cursor-pointer">
