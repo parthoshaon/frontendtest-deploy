@@ -9,7 +9,7 @@ const Navbar = ({loggedIn}) => {
     setName(window.localStorage.getItem('name'));
   },[])
   return (
-      <div className="bg-white p-4 border-b-[1px] sticky flex gap-14 font-bold px-14  top-0 z-10">
+      <div className="bg-white p-4 border-b-[1px] sticky flex gap-14 font-bold px-14  top-0 z-10 w-full">
          <span className="mr-auto flex flex-col items-center">
          <span className="w-10 h-10"><svg  viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M180 180H134.289C134.289 162.365 130.815 144.903 124.067 128.611C117.318 112.319 107.426 97.5156 94.956 85.0464C82.4861 72.5772 67.6821 62.6863 51.3895 55.9385C35.0969 49.1908 17.6347 45.7183 0 45.7194V0C99.4101 0 180 80.5899 180 180Z" fill="#3E0563"/>
