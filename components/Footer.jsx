@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
             <Link href="/"><span className="text-[#FA9706]">Contact</span></Link>
             {contact.map((link)=>(
-                <Link href="/" key={link}><span>{link}</span></Link>
+                <Link href="/" key={link}><span className="w-3/4">{link}</span></Link>
             ))}
         </div>
         </div>
