@@ -34,7 +34,7 @@ const Home = () => {
     return window.localStorage.getItem('name') ? setState(true) : setState(false);
   }, [])
   return (
-      <div className="flex flex-col gap-20 w-full">
+      <div className="flex flex-col gap-20 w-screen">
       <Navbar loggedIn={state}/>
       <Hero />
       <Features />
