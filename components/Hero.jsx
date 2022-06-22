@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 const Hero = () => {
   return (
-      <div className="flex flex-col items-center content">
+      <div className="flex flex-col items-center content w-full">
           <h1 className="text-center lg:text-7xl text-3xl font-medium w-4/5 text-[#0c0114]">First Ever Tech Personality Award For Africans in Europe</h1>
           <div className="lg:w-1/2 w-4/5 flex items-center mx-auto mt-8 gap-6">
             <label className="w-full relative block mx-auto">
