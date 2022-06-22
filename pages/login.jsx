@@ -29,7 +29,7 @@ return;
 return router.push('/')
 }
   return (
-    <div className="bg-[#1F0231] w-full h-fit flex items-center p-12">
+    <div className="bg-[#1F0231] w-full h-fit flex items-center lg:p-12 p-4">
     <div className="bg-white m-auto flex flex-col text-center p-10 lg:w-1/2 w-full gap-2">
       <h1><span className="font-bold text-xl w-1/2 mx-auto">Let's pick up where we left off yeah!</span></h1>
       <h4><span className="font-bold text-lg">Log in to your account</span></h4>
