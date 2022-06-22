@@ -38,12 +38,12 @@ const ConnectedAwards = () => {
               <div className="w-full lg:p-12 p-6 flex flex-col gap-8 lg:pl-0 pl-0">
                 <div className="w-full lg:p-12 p-6 flex flex-col gap-6">
                 <span className="flex flex-col gap-4">
-                    <h1 className="text-xl lg:text-4xl font-bold">The Connected Awards</h1>
+                    <h1 className="text-xl lg:text-4xl font-bold">Celebrated Techies</h1>
                     <div className="w-24 h-1 bg-[#FA9706] rounded-full ml-1"></div>
                 </span>
                 <p className="leading-6 font-semibold text-base lg:w-9/12 lg:p-0 pr-6 w-full">The connected is.....It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
 
-                <Link href="/awards"><span className="w-fit text-[#EEE8F2] hover:bg-[#EEE8F2] py-3 px-6 rounded bg-[#3E0563] hover:text-[#3E0563] cursor-pointer transition-all duration-500 ease-in">Learn more</span></Link>
+                <Link href="/celebrated"><span className="w-fit text-[#EEE8F2] hover:bg-[#EEE8F2] py-3 px-6 rounded bg-[#3E0563] hover:text-[#3E0563] cursor-pointer transition-all duration-500 ease-in">Learn more</span></Link>
                 </div>
                 <div>
                 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
