@@ -8,7 +8,7 @@ const social = ["Linkedin"];
 const contact = ["+23470572199571","Chat On Whatsapp", "connectedawards@gmail.com"];
 const Footer = () => {
   return (
-    <div className="bg-[#1F0231] text-white flex flex-col items-center p-12 gap-20 w-screen">
+    <div className="bg-[#1F0231] text-white flex flex-col items-center p-12 gap-20 w-full">
         <div className="grid  gap-4 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full">
         <div className="flex flex-col gap-4">
             <Link href="/"><span className="text-[#FA9706]">About</span></Link>
