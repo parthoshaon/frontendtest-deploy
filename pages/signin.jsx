@@ -58,7 +58,7 @@ return router.push('/login');
 }
   return (
     <div className="bg-[#1F0231] w-full h-fit flex items-center p-12">
-    <div className="bg-white m-auto flex flex-col text-center p-10 lg:w-1/2 w-4/5 gap-2">
+    <div className="bg-white m-auto flex flex-col text-center p-10 lg:w-1/2 w-full gap-2">
       <h1><span className="font-bold text-xl w-1/2 mx-auto">Time to vote your favourite Techie, let's make this amazing!</span></h1>
       <h4><span className="font-bold text-lg">Create an account</span></h4>
       <span>Have an account? <Link href="/login"><span className="text-[#FA9706] cursor-pointer">Login in</span></Link></span>
