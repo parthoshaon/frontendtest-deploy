@@ -36,11 +36,11 @@ const Footer = () => {
         </div>
         </div>
         <div className="flex w-full flex-col lg:flex-row gap-8">
-            <span className="flex flex-col gap-0">
+            <span className="flex flex-col gap-0 mx-auto">
               <span className="block lg:w-36 lg:h-36 w-12 h-12"><Image src={image} layout="responsive"/></span>
               <span className="lg:-mt-[3rem]">Celebrating Techies Globally</span>
             </span>
-            <span className="float-right lg:ml-auto align-middle my-auto">&copy; 2022 The Connected Awards - All rights reserved</span>
+            <span className="float-right lg:ml-auto align-middle my-auto text-center lg:text-right">&copy; 2022 The Connected Awards - All rights reserved</span>
         </div>
     </div>
   )
