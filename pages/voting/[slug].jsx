@@ -60,7 +60,7 @@ const vote = () =>{
                 <span className="p-3 text-[#EEE8F2] hover:bg-[#EEE8F2] bg-[#3E0563] hover:text-[#3E0563] transition-all duration-500 ease-in font-semibold rounded-r cursor-pointer h-max" onClick={()=>{
                   setVotes((votes)=>votes+count);
                   setVote((votes)=>votes-count)
-                }} {vote == 0 && disabled}>Vote</span>
+                }} disabled={vote == 0 ? true : false }>Vote</span>
           </div>    </span>
             )})}
            </div> 
