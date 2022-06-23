@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 const links = [{text:'Categories',link:"categories"},{text:'Past editions',link:"pasteditions"},{text:'Future editions',link:"futureeditions"}, {text:'About us',link:"about"}, {text:'Make a donation',link:"donation"} ];
 const {floor,random} = Math;
 const Navbar = ({loggedIn}) => {
   const [drop, setDrop] = useState(false);
   const [log, setLog] = useState(false);
   const [name, setName] = useState('');
+  const router = useRouter();
   useEffect(()=>{
     setName(window.localStorage.getItem('name'));
   },[])
@@ -19,7 +21,7 @@ const Navbar = ({loggedIn}) => {
 </span>
 <span className="text-center text-sm flex flex-col items-center leading-3">The Connected<span> Awards</span></span>
 </span>
-<div className={`${!drop? `top-[-500%] ease-out` : `flex top-24 h-[90vh] inset-0 right-0 p-12 w-[calc(96.5vw)] transition-all ease-in duration-1000`} lg:flex lg:flex-row flex-col w-4/5 lg:relative lg:top-0 absolute bg-white z-10  lg:h-fit lg:w-full lg:p-0 lg:my-auto lg:align-middle lg:ml-auto`}>
+<div className={`${!drop? `top-[-500%] ease-out` : `flex top-24 h-[90vh] inset-0 right-0 p-12 w-[calc(96.5vw)]`} transition-all ease-in duration-1000 lg:flex lg:flex-row flex-col w-4/5 lg:relative lg:top-0 absolute bg-white z-10  lg:h-fit lg:w-full lg:p-0 lg:my-auto lg:align-middle lg:ml-auto`}>
 <div className="flex flex-col lg:flex-row gap-10 align-middle my-auto z-10 lg:mx-auto">
          {links.map((link)=>(
           <Link  key={link.link} href={`/${link.link}`}><span className="cursor-pointer hover:text-gray-500 transition-all duration-500 text-[#0c0114]">{link.text}</span></Link>
@@ -46,8 +48,18 @@ const Navbar = ({loggedIn}) => {
                 <svg className={`w-5 h-5 ${ log?`rotate-180`: ``}`} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3333 6.66666L7.99996 10L4.66663 6.66666" stroke="#0C0114" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                < span className={`${!log? `top-[-500%] ease-out` : `flex top-16 h-fit p-12 w-max transition-all ease-in duration-1000`} absolute bg-white`}>
-                  Logout
+                < span className={`${!log? `top-[-500%] ease-out hidden lg:flex` : `flex top-16 h-fit w-max  py-12`} transition-all ease-in duration-1000 lg:absolute bg-[#3E0563] text-white`}>
+                  <span className="border-y py-3 px-12 hover:px-10 w-fit flex hover:text-[#3E0563] hover:bg-white group" onClick={()=>{
+                    window.localStorage.clear();
+                    return router.reload();
+
+                  }}>
+                <svg className="w-4 h-4 my-auto align-middle group-hover:mr-4 transition-all ease-in duration-1000" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.38574 15.5H3.38574C2.55731 15.5 1.88574 14.8285 1.88574 14V5C1.88574 4.17157 2.55731 3.5 3.38574 3.5H6.38574V5H3.38574V14H6.38574V15.5Z" className="fill-white group-hover:fill-[#3E0563]"/>
+<path d="M10.3813 13.5388L11.4465 12.4826L8.50709 9.51817H15.3643C15.7785 9.51817 16.1143 9.18239 16.1143 8.76817C16.1143 8.35395 15.7785 8.01817 15.3643 8.01817H8.49269L11.478 5.05807L10.4218 3.99292L5.62866 8.74559L10.3813 13.5388Z" className="fill-white group-hover:fill-[#3E0563]"/>
+</svg>
+Logout
+                </span>
                 </span>
           
 </span>
