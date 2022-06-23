@@ -5,7 +5,7 @@ import image from '../public/connectedAwards.png';
 const about = ["The Connected Magazine" ,"Past Edition","Celebrated Techies"];
 const legal = ["Terms Of Service" ,"Privacy Policy"];
 const social = ["Linkedin"];
-const contact = ["+23470572199571","Chat On Whatsapp", "connectedawards@gmail.com"];
+const contact = ["+23470572199571","Chat On Whatsapp", "connected<br/>awards</br>@gmail.com"];
 const Footer = () => {
   return (
     <div className="bg-[#1F0231] text-white flex flex-col items-center p-12 gap-20 w-full">
@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
             <Link href="/"><span className="text-[#FA9706]">Contact</span></Link>
             {contact.map((link)=>(
-                <Link href="/" key={link}><span className="w-3/5">{link}</span></Link>
+                <Link href="/" key={link}><span>{link}</span></Link>
             ))}
         </div>
         </div>
