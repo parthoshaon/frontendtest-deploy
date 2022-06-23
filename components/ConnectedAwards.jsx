@@ -15,7 +15,7 @@ const ConnectedAwards = () => {
   
     return (
         <div className="flex flex-col gap-8 text-[#0c0114] w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2" data-aos="zoom-out-down">
               <div className="w-full h-auto block lg:p-12 p-6"><Image src={image} layout="responsive"/></div>
               <div className="w-full lg:p-12 p-6 flex flex-col gap-6 lg:pr-0 pr-0">
                 <span className="flex flex-col gap-4">
@@ -33,7 +33,7 @@ const ConnectedAwards = () => {
                 </div>
               </div>
         </div>
-        <div className="lg:grid lg:grid-cols-2 flex flex-col-reverse text-[#0c0114]">
+        <div className="lg:grid lg:grid-cols-2 grid-cols-1 flex flex-col-reverse text-[#0c0114]" data-aos="zoom-out-up">
             
               <div className="w-full lg:p-12 p-6 flex flex-col gap-8 lg:pl-0 pl-0">
                 <div className="w-full lg:p-12 p-6 flex flex-col gap-6">
