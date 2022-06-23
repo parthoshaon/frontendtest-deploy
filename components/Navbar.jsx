@@ -45,7 +45,11 @@ const Navbar = ({loggedIn}) => {
 <span className="flex cursor-pointer" onClick={()=>setLog(!log)}>{name}
                 <svg className={`w-5 h-5 ${ log?`rotate-180`: ``}`} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3333 6.66666L7.99996 10L4.66663 6.66666" stroke="#0C0114" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                </svg>
+                < span className={`${!log? `top-[-500%] ease-out` : `flex top-16 h-fit p-12 w-max transition-all ease-in duration-1000`} absolute bg-white`}>
+                  Logout
+                </span>
+          
 </span>
          </span>
             
