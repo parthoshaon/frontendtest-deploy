@@ -16,7 +16,7 @@ const celebrated = () => {
           <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8 lg:p-12 md:p-8 p-6">
           {data.map((data)=>(
             <span className="flex items-center flex-col gap-6 p-6 shadow-xl hover:shadow-2xl group transition-all duration-500 ease-in cursor-pointer">
-              <span className="w-64 h-64 bg-[#D1D1D6]"></span>
+              <span className="lg:w-64 lg:h-64 w-24 h-24 bg-[#D1D1D6]"></span>
               <span clasName="text-lg font-semibold">{data.name}</span>
               <span className="text-[#3E0563] font-semibold text-base">{data.role}</span>
   </span>
