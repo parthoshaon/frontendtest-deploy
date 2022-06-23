@@ -5,7 +5,7 @@ import image from '../public/connectedAwards.png';
 const about = ["The Connected Magazine" ,"Past Edition","Celebrated Techies"];
 const legal = ["Terms Of Service" ,"Privacy Policy"];
 const social = ["Linkedin"];
-const contact = ["+23470572199571","Chat On Whatsapp", "connected<br/>awards</br>@gmail.com"];
+const contact = ["+23470572199571","Chat On Whatsapp"];
 const Footer = () => {
   return (
     <div className="bg-[#1F0231] text-white flex flex-col items-center p-12 gap-20 w-full">
