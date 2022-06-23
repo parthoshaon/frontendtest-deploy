@@ -21,7 +21,7 @@ const Navbar = ({loggedIn}) => {
 <div className={`${!drop? `top-[-500%] ease-out` : `flex top-24 h-[90vh] inset-0 right-0 p-12 w-[calc(96.5vw)] transition-all ease-in duration-1000`} lg:flex lg:flex-row flex-col w-4/5 lg:relative lg:top-0 absolute bg-white z-20  lg:h-fit lg:w-full lg:p-0 lg:my-auto lg:align-middle lg:ml-auto`}>
 <div className="flex flex-col lg:flex-row gap-10 align-middle my-auto z-20 lg:mx-auto">
          {links.map((link)=>(
-          <Link href={`/${link.link}`}><span key={link.link} className="cursor-pointer hover:text-gray-500 transition-all duration-500 text-[#0c0114]">{link.text}</span></Link>
+          <Link  key={link.link} href={`/${link.link}`}><span className="cursor-pointer hover:text-gray-500 transition-all duration-500 text-[#0c0114]">{link.text}</span></Link>
          ))}
     </div>
     {!loggedIn ? <span className="flex-col flex lg:flex-row gap-6 lg:ml-auto align-middle my-auto z-20 w-fit">
@@ -53,11 +53,16 @@ const Navbar = ({loggedIn}) => {
     </div>
     
     <div className="my-auto ml-auto float-right lg:hidden cursor-pointer">
-    <div className="
+    <div className={`
     w-12 h-1 bg-black cursor-pointer rounded-full
     before:content-[''] before:w-12 before:h-1 before:absolute before:bg-black before:cursor-pointer before:rounded-full before:mt-2.5
     after:content-[''] after:w-12 after:h-1 after:absolute after:bg-black after:cursor-pointer after:rounded-full after:-mt-2.5
-    "
+    transition-all duration-500 ease-in
+    after:transition-all after:duration-500  after:ease-in
+    before:transition-all before:duration-500  before:ease-in
+    
+    ${drop ? `w-0 before:rotate-[135deg] after:rotate-45 after:right-[70px] before:right-[70px] after:mt-0 before:mt-0` : ``}
+    `}
     onClick={()=>setDrop(!drop)}
     ></div>
     </div>
