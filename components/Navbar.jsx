@@ -9,7 +9,7 @@ const Navbar = ({loggedIn}) => {
     setName(window.localStorage.getItem('name'));
   },[])
   return (
-      <div className="bg-white p-4 border-b-[1px] sticky flex gap-14 font-bold px-14  top-0 z-10 w-full">
+      <div className="bg-white p-4 border-b-[1px] sticky flex gap-14 font-bold px-14  top-0 z-20 w-full">
          <span className="mr-auto flex flex-col items-center">
          <span className="w-10 h-10"><svg  viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M180 180H134.289C134.289 162.365 130.815 144.903 124.067 128.611C117.318 112.319 107.426 97.5156 94.956 85.0464C82.4861 72.5772 67.6821 62.6863 51.3895 55.9385C35.0969 49.1908 17.6347 45.7183 0 45.7194V0C99.4101 0 180 80.5899 180 180Z" fill="#3E0563"/>
@@ -18,17 +18,17 @@ const Navbar = ({loggedIn}) => {
 </span>
 <span className="text-center text-sm flex flex-col items-center leading-3">The Connected<span> Awards</span></span>
 </span>
-<div className={`${!drop? `top-[-500%] ease-out` : `flex top-24 h-[90vh] inset-0 right-0 p-12 w-[calc(96.5vw)] transition-all ease-in duration-1000`} lg:flex lg:flex-row flex-col w-4/5 lg:relative lg:top-0 absolute bg-white z-20  lg:h-fit lg:w-full lg:p-0 lg:my-auto lg:align-middle lg:ml-auto`}>
-<div className="flex flex-col lg:flex-row gap-10 align-middle my-auto z-20 lg:mx-auto">
+<div className={`${!drop? `top-[-500%] ease-out` : `flex top-24 h-[90vh] inset-0 right-0 p-12 w-[calc(96.5vw)] transition-all ease-in duration-1000`} lg:flex lg:flex-row flex-col w-4/5 lg:relative lg:top-0 absolute bg-white z-10  lg:h-fit lg:w-full lg:p-0 lg:my-auto lg:align-middle lg:ml-auto`}>
+<div className="flex flex-col lg:flex-row gap-10 align-middle my-auto z-10 lg:mx-auto">
          {links.map((link)=>(
           <Link  key={link.link} href={`/${link.link}`}><span className="cursor-pointer hover:text-gray-500 transition-all duration-500 text-[#0c0114]">{link.text}</span></Link>
          ))}
     </div>
-    {!loggedIn ? <span className="flex-col flex lg:flex-row gap-6 lg:ml-auto align-middle my-auto z-20 w-fit">
+    {!loggedIn ? <span className="flex-col flex lg:flex-row gap-6 lg:ml-auto align-middle my-auto z-10 w-fit">
       <Link href="/login"><span className="bg-[#EEE8F2] hover:text-[#EEE8F2] p-3 rounded text-[#3E0563] hover:bg-[#3E0563] cursor-pointer transition-all duration-500 w-fit ease-in">Log in</span></Link>
       <Link href="/signin"><span className="text-[#EEE8F2] hover:bg-[#EEE8F2] p-3 rounded bg-[#3E0563] hover:text-[#3E0563] cursor-pointer transition-all duration-500 w-fit ease-in">Create Account</span></Link>
     </span> :
-    <span  className="flex-col flex lg:flex-row gap-6 lg:ml-auto align-middle my-auto z-20 w-fit">
+    <span  className="flex-col flex lg:flex-row gap-6 lg:ml-auto align-middle my-auto z-10 w-fit">
       <span className="flex gap-2 align-middle my-auto"><svg className="w-5 h-5" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.2997 0H4.29942L0.700562 12.9577H4.30675L1.24051 24H2.32069L12.7589 11.0417H7.47099L13.2997 0Z" fill="#FA9706"/>
 </svg>
