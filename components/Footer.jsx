@@ -8,8 +8,8 @@ const social = ["Linkedin"];
 const contact = ["+23470572199571","Chat On Whatsapp", "connectedawards@gmail.com"];
 const Footer = () => {
   return (
-    <div className="bg-[#1F0231] text-white flex flex-col items-center p-12 gap-20 w-full">
-        <div className="grid  gap-4 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-3/4 lg:w-full">
+    <div className="bg-[#1F0231] text-white flex flex-col p-12 gap-20 w-full">
+        <div className="grid  gap-4 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-3/4 lg:w-full float-left mr-auto">
         <div className="flex flex-col gap-4">
             <Link href="/"><span className="text-[#FA9706]">About</span></Link>
             {about.map((link)=>(
@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
             <Link href="/"><span className="text-[#FA9706]">Contact</span></Link>
             {contact.map((link)=>(
-                <Link href="/" key={link}><span className="w-3/4">{link}</span></Link>
+                <Link href="/" key={link}><span className="w-1/2">{link}</span></Link>
             ))}
         </div>
         </div>
