@@ -4,6 +4,7 @@ const links = [{text:'Categories',link:"categories"},{text:'Past editions',link:
 const {floor,random} = Math;
 const Navbar = ({loggedIn}) => {
   const [drop, setDrop] = useState(false);
+  const [log, setLog] = useState(false);
   const [name, setName] = useState('');
   useEffect(()=>{
     setName(window.localStorage.getItem('name'));
@@ -42,7 +43,7 @@ const Navbar = ({loggedIn}) => {
 </svg>
 </span>
 <span className="flex">{name}
-<svg className="w-5 h-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg className="w-5 h-5 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3333 6.66666L7.99996 10L4.66663 6.66666" stroke="#0C0114" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 </span>
