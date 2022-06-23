@@ -8,7 +8,7 @@ const social = ["Linkedin"];
 const contact = ["+23470572199571","Chat On Whatsapp"];
 const Footer = () => {
   return (
-    <div className="bg-[#1F0231] text-white flex flex-col items-center p-12 gap-20 w-full">
+    <div className="bg-[#1F0231] text-white flex flex-col items-center p-12 gap-20 w-full text-xs lg:text-base">
         <div className="grid  gap-4 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full">
         <div className="flex flex-col gap-4">
             <Link href="/"><span className="text-[#FA9706]">About</span></Link>
@@ -37,10 +37,10 @@ const Footer = () => {
         </div>
         <div className="flex w-full flex-col lg:flex-row gap-8">
             <span className="flex flex-col gap-0">
-              <span className="block w-36 h-36"><Image src={image} layout="responsive"/></span>
-              <span className="-mt-[3rem]">Celebrating Techies Globally</span>
+              <span className="block lg:w-36 lg:h-36 w-12 h-12"><Image src={image} layout="responsive"/></span>
+              <span className="lg:-mt-[3rem]">Celebrating Techies Globally</span>
             </span>
-            <span className="float-right lg:ml-auto align-middle my-auto text-sm">&copy; 2022 The Connected Awards - All rights reserved</span>
+            <span className="float-right lg:ml-auto align-middle my-auto">&copy; 2022 The Connected Awards - All rights reserved</span>
         </div>
     </div>
   )
