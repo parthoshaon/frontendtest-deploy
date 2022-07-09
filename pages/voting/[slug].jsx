@@ -31,7 +31,7 @@ const vote = () =>{
                   <span className="p-4 text-[#EEE8F2] hover:bg-[#EEE8F2] bg-[#3E0563] hover:text-[#3E0563] transition-all duration-500 ease-in font-semibold rounded cursor-pointer">Search</span>
             </div>
             <div className="text-[#0c0114]">You have <span className="text-3xl text-[#3E0563]">{vote}</span> votes left</div>
-            <div className="text-[#0c0114]">Incease you voting power <Link href="/increase" ><span className="text-lg text-[#3E0563] cursor-pointer">Here</span></Link> </div>
+            <div className="text-[#0c0114]">Increase you voting power <Link href="/increase" ><span className="text-lg text-[#3E0563] cursor-pointer">Here</span></Link> </div>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-8 lg:p-12 md:p-8 p-6">
             {data.map((data)=>{
               const [count,setCount] = useState(1);
@@ -49,7 +49,7 @@ const vote = () =>{
 </svg>
 
                 </span>
-                  <input type="text" className="block bg-white py-2 pl-12 pr-3 w-24 shadow-sm outline-none h-[auto] align-middle my-auto rounded-l-md h-max border-2  border-[#3E0563]" value={count} disabled/>
+                  <input type="text" className="block bg-white py-2 pl-12 pr-3 w-24 shadow-sm outline-none  align-middle my-auto rounded-l-md h-max border-2  border-[#3E0563]" value={count} disabled/>
                 <span className="absolute inset-y-0 right-2 flex items-center pr-2"><svg  onClick={()=>{setCount((num)=>num+1)}} className="h-3 w-3 cursor-pointer" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6 11V1" stroke="#3E0563" stroke-width="2" stroke-linecap="round"/>
 <path d="M1 6H11" stroke="#3E0563" stroke-width="2" stroke-linecap="round"/>
