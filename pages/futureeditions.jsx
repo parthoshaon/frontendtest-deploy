@@ -32,7 +32,7 @@ const futureeditions = () => {
           <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8 lg:p-12 md:p-8 p-6">
           {data.map((data)=>(
             <span className="flex items-center flex-col gap-6 p-6 shadow-xl hover:shadow-2xl group transition-all duration-500 ease-in cursor-pointer">
-              <span clasName="text-lg font-semibold">{data.icon}</span>
+              <span className="text-lg font-semibold">{data.icon}</span>
               <span className="text-[#3E0563] font-semibold text-base">{data.name}</span>
       <Link href="/nominate"><span className="text-[#EEE8F2] hover:bg-[#EEE8F2] p-3 rounded bg-[#3E0563] hover:text-[#3E0563] cursor-pointer transition-all duration-500 w-fit ease-in">Nominate</span></Link>
 
