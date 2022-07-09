@@ -68,9 +68,20 @@ const signin = () => {
                     <select ref={genderEl} name="gender" id="gender" className={`peer outline-none ring-2 ${gendererror ? `peer-focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-4 text-gray-500 rounded-sm px-4`}>
                     <option value="">Select Category</option>
                             <option value="Exceptional Data Analyst">Exceptional Data Analyst</option>
-                    <option value="Female">Female</option>
-                </select><label className={`${gendererror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} text-xs peer-focus:text-base font-semibold cursor-pointer`} htmlFor="gender">Gender</label></span>
-                        <span className="flex flex-col-reverse text-left gap-2 w-full">{firerror && <p className="text-xs text-red-400">Please enter your first name</p>}<input ref={firstNameEl} name="firstname" id="firstname" type="text" className={`peer outline-none ring-2 ${firerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`} /><label className={`${firerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="firstname">First Name</label></span>
+                            <option value="Exceptional Devops Expert">Exceptional Devops Expert</option>
+                            <option value="Exceptional Data Scientist">Exceptional Data Scientist</option>
+                            <option value="Exceptional Visual Designer">Exceptional Visual Designer</option>
+                            <option value="Promising Data Analyst">Promising Data Analyst</option>
+                            <option value="Promising Data Scientist">Promising Data Scientist</option>
+                            <option value="Exceptional Visual Designer">Promising Visual Designer</option>
+                        </select><label className={`${gendererror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} text-xs peer-focus:text-base font-semibold cursor-pointer`} htmlFor="gender">Gender</label></span>
+                    
+                    <span className="flex flex-col-reverse text-left gap-2 w-full">{firerror && <p className="text-xs text-red-400">Please enter your full name</p>}<input ref={firstNameEl} name="fullname" id="fullname" type="text" className={`peer outline-none ring-2 ${firerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`} /><label className={`${firerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="fullname">Full Name</label></span>
+                    <span>
+                        <h1 className="text-left font-bold">Social Media Links</h1>
+                        <span><label></label><input type="text" /></span>
+                        <span></span>
+                    </span>
                         <span className="flex flex-col-reverse text-left gap-2">{emerror && <p className="text-xs text-red-400">Invalid email address</p>}<input ref={emailEl} type="email" name="email" id="email" className={`peer outline-none ring-2 ${emerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`} /><label className={`${emerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="email">Email Address</label></span>
                     <span className="flex flex-col-reverse text-left gap-2">{phoneerror && <p className="text-xs text-red-400">Invalid phone number</p>}<input ref={phoneEl} type="tel" name="phone" id="phone" className={`peer outline-none ring-2 ${phoneerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`} /><label className={`${phoneerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="phone">Phone Number</label></span>
                     <span className="flex flex-col-reverse text-left gap-2 group">{passworderror && <p className="text-xs text-red-400">Password must be more than 7 characters</p>}<input ref={passwordEl} type="password" name="password" id="password" className={`peer outline-none ring-2 ${passworderror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`} /><label className={`${passworderror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="password">Set Password</label></span>
