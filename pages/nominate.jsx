@@ -80,18 +80,33 @@ const signin = () => {
                     <span className="flex flex-col gap-8">
                         <h1 className="text-left font-bold">Social Media Links</h1>
                         <span className="flex flex-row-reverse  items-center w-full gap-6">
-                            <input type="text" id="linkedln" name="linkedln" ref={linkedlnEl} className={`peer outline-none ring-2 ${linkedlnerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm basis-3/4`} />
+                        <span className="flex flex-col gap-2 basis-3/4">
+                                <input type="url" id="linkedln" name="linkedln" ref={linkedlnEl} className={`peer outline-none ring-2 ${linkedlnerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm basis-3/4`} />
+                                {linkedlnerror && <p className="text-xs text-red-400 float-right ml-auto">Please enter a valid url</p>} 
+                        </span>
                             <label htmlFor="linkedln" className={`flex items-center gap-2 basis-1/4 ${linkedlnerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} lg:text-base text-sm lg:peer-focus:text-lg peer-focus:text-base font-semibold cursor-pointer`}><div className="w-8 h-8 block"><Image src={linkedln} layout="responsive" /></div><span>Linkedln</span></label>
                         </span>
                         <span className="flex flex-row-reverse items-center w-full gap-6">
-                            <input type="text" name="instagram" id="instagram" ref={instagramEl} className={`peer outline-none ring-2 ${instagramerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm  basis-3/4`} />
+                        <span className="flex flex-col gap-2 basis-3/4">
+                                <input type="url" name="instagram" id="instagram" ref={instagramEl} className={`peer outline-none ring-2 ${instagramerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm  basis-3/4`} />
+                                {instagramerror && <p className="text-xs text-red-400 float-right ml-auto">Please enter a valid url</p>}
+                        </span>
                             <label htmlFor="instagram" className={`flex items-center gap-2 basis-1/4 ${instagramerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} lg:text-base text-sm lg:peer-focus:text-lg peer-focus:text-base font-semibold cursor-pointer`}><div className="w-8 h-8 block"><Image src={instagram} layout="responsive" /></div><span>Instagram</span></label>
                         </span>
                         <span className="flex flex-row-reverse items-center w-full gap-6">
-                            <input type="text" name="twitter" id="twitter" ref={twitterEl} className={`peer outline-none ring-2 ${twittererror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm  basis-3/4`} />
-                            <label htmlFor="twitter" className="flex items-center gap-2 basis-1/4"><div className="w-8 h-8 block"><Image src={twitter} layout="responsive" /></div><span>Twitter</span></label>
+                        <span className="flex flex-col gap-2 basis-3/4">
+                            <input type="url" name="twitter" id="twitter" ref={twitterEl} className={`peer outline-none ring-2 ${twittererror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm  basis-3/4`} />
+                            {twittererror && <p className="text-xs text-red-400 float-right ml-auto">Please enter a valid url</p>}
                         </span>
-                        <span className="flex items-center w-full gap-6"><label className="flex items-center gap-2 basis-1/4"><div className="w-8 h-8 block"><Image src={facebook} layout="responsive" /></div><span>Facebook</span></label><input type="text" ref={facebookEl} className={`peer outline-none ring-2 ${facebookerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm basis-3/4`} /></span>
+                            <label htmlFor="twitter" className={`flex items-center gap-2 basis-1/4 ${twittererror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} lg:text-base text-sm lg:peer-focus:text-lg peer-focus:text-base font-semibold cursor-pointer`}><div className="w-8 h-8 block"><Image src={twitter} layout="responsive" /></div><span>Twitter</span></label>
+                        </span>
+                        <span className="flex flex-row-reverse items-center w-full gap-6">
+                        <span className="flex flex-col gap-2 basis-3/4">
+                                <input type="url" name="facebook" id="facebook" ref={facebookEl} className={`peer outline-none ring-2 ${facebookerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm basis-3/4`} />
+                                {facebookerror && <p className="text-xs text-red-400 float-right ml-auto">Please enter a valid url</p>}
+                        </span>
+                            <label htmlFor="facebook" className={`flex items-center gap-2 basis-1/4 ${facebookerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} lg:text-base text-sm lg:peer-focus:text-lg peer-focus:text-base font-semibold cursor-pointer`}><div className="w-8 h-8 block"><Image src={facebook} layout="responsive" /></div><span>Facebook</span></label>
+                        </span>
                     </span>
                     <p>The First-Ever Tech Personality Awards Recognizing Promising and Exceptional African Talents in all Technological Fields. The West African Countries include 16 countries of Benin, Burkina Faso, Gambia, Ghana, Guinea, Guinea-Bissau, Ivory Coast, Liberia, Mali, Mauritania, Niger, Nigeria, Senegal, Sierra Leone, and Togo</p>
                         <p>For questions, partnerships & enquiries, send us a mail via connectedawards@gmail.com</p>
