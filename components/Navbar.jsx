@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-const links = [{text:'Categories',link:"categories"},{text:'Past editions',link:"pasteditions"},{text:'Future editions',link:"futureeditions"}, {text:'About us',link:"about"}, {text:'Make a donation',link:"donation"} ];
+const links = [{text:'Categories',link:"categories"},{text:'Past editions',link:"celebrated"},{text:'Future editions',link:"futureeditions"}, {text:'About us',link:"about"}, {text:'Make a donation',link:"donation"} ];
 const {floor,random} = Math;
 const Navbar = ({loggedIn}) => {
   const [drop, setDrop] = useState(false);
