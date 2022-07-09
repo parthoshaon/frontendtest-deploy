@@ -30,15 +30,15 @@ const vote = () =>{
   
                   <span className="p-4 text-[#EEE8F2] hover:bg-[#EEE8F2] bg-[#3E0563] hover:text-[#3E0563] transition-all duration-500 ease-in font-semibold rounded cursor-pointer">Search</span>
             </div>
-            <div clasName="text-[#0c0114]">You have <span className="text-3xl text-[#3E0563]">{vote}</span> votes left</div>
-            <div clasName="text-[#0c0114]">Incease you voting power <Link href="/increase" ><span className="text-lg text-[#3E0563] cursor-pointer">Here</span></Link> </div>
+            <div className="text-[#0c0114]">You have <span className="text-3xl text-[#3E0563]">{vote}</span> votes left</div>
+            <div className="text-[#0c0114]">Incease you voting power <Link href="/increase" ><span className="text-lg text-[#3E0563] cursor-pointer">Here</span></Link> </div>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-8 lg:p-12 md:p-8 p-6">
             {data.map((data)=>{
               const [count,setCount] = useState(1);
               const [votes,setVotes] = useState(750);
               return(
               <span className="flex items-center flex-col gap-6 p-6 shadow-xl hover:shadow-2xl group transition-all duration-500 ease-in cursor-pointer select-none">
-              <span className="w-24 h-24 rounded-full bg-[#1F0231] shadow-xl shadow-[#1F0231]/30 hover:shadow-2xl"></span>
+                  <span className="w-24 h-24 rounded-full bg-[#1F0231] shadow-xl shadow-[#1F0231]/30 hover:shadow-2xl hover:shadow-[#1F0231]/30 transition-[box-shadow] duration-500 ease-in"></span>
                 <span>{data.name}</span>
                 <span>{votes} votes</span>
                 <div className="flex items-center mx-auto mt-8 w-fit h-fit">
@@ -57,10 +57,12 @@ const vote = () =>{
 </span>
                 </label>
 
-                <span className="p-3 text-[#EEE8F2] hover:bg-[#EEE8F2] bg-[#3E0563] hover:text-[#3E0563] transition-all duration-500 ease-in font-semibold rounded-r cursor-pointer h-max" onClick={()=>{
-                  setVotes((votes)=>votes+count);
-                  setVote((votes)=>votes-count)
-                }} disabled={vote == 0 ? true : false }>Vote</span>
+                    <span className={`${vote - count < 0 && `bg-[#3E0563]/75 hover:bg-[#3E0563]/75 hover:text-white`} p-3 text-[#EEE8F2] hover:bg-[#EEE8F2] bg-[#3E0563] hover:text-[#3E0563] transition-all duration-500 ease-in font-semibold rounded-r cursor-pointer h-max`} onClick={()=>{
+                      if (vote - count >= 0) {
+                        setVotes((votes) => votes + count);
+                        setVote((votes) => votes - count)
+                      }
+                }} disabled={vote === 0 ? true : false }>Vote</span>
           </div>    </span>
             )})}
            </div> 
