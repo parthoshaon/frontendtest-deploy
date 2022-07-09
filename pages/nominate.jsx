@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { facebook, twitter, instagram, linkedln } from "../public";
+import { facebook, twitter, instagram, linkedln, thumbs, close } from "../public";
 import Image from "next/image";
 const signin = () => {
     const router = useRouter();
@@ -11,6 +11,7 @@ const signin = () => {
     const [instagramerror, setInstagramerror] = useState(false);
     const [linkedlnerror, setLinkedlnerror] = useState(false);
     const [twittererror, setTwittererror] = useState(false);
+    const [popUp, setPopUp] = useState(true);
     const fullNameEl = useRef();
     const awardEl = useRef();
     const facebookEl = useRef();
@@ -51,9 +52,26 @@ const signin = () => {
             }
             return;
         }
+        return setPopUp(true);
 
     }
     return (
+        <>
+        <div className={`${popUp ? `flex transition-[display] duration-500 ease-in` : `hidden transition-[display] duration-500 ease-out`} flex-col items-center my-auto align-middle`}>
+          <div className="inset-0 bg-black/70 w-full h-full fixed z-30"></div>
+        <div onBlur={() => setPopUp(false)} tabIndex={90}  className="fixed z-40 bg-white lg:w-2/5 w-4/5 h-auto p-10 flex flex-col items-center rounded shadow-sm gap-8">
+            <div className="float-right ml-auto cursor-pointer"
+              onClick={() => setPopUp(false)}
+            ><Image src={close} width="24px" height="24px" /> </div>
+            <Image src={thumbs} width="96px" height="96px" />
+            <h1 className="text-3xl text-[#3E0563] tracking-wider font-bold">Awesome!</h1>
+            <span className="text-center">
+            <p>You have successfully Increased your voting power.</p>
+            <p>Go and make your favorite candidate win!</p>
+            </span>
+            <span className="lg:p-3 p-2 bg-[#3E0563] text-white text-sm font-bold rounded lg:px-8 px-4 tracking-wider"><Link href="/voting">Return to voting page</Link></span>
+          </div>
+        </div>
         <div className="bg-[#1F0231] w-full h-fit flex items-center lg:p-12 p-4">
             <div className="bg-white m-auto flex flex-col text-center p-10 lg:w-1/2 w-full gap-2">
                 <h1><span className="font-bold text-xl w-1/2 mx-auto">Nominate a candidate for</span></h1>
@@ -113,7 +131,8 @@ const signin = () => {
                     <span className="w-full p-3 bg-[#3E0563] text-[#EEE8F2] hover:text-[#3E0563] hover:bg-[#EEE8F2] rounded transition-all duration-500 ease-in cursor-pointer" onClick={handleSubmission}>Submit</span>
                 </span>
             </div>
-        </div>
+            </div>
+        </>
     )
 }
 
