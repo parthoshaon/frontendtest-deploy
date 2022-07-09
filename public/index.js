@@ -1,4 +1,6 @@
 import rocket from './rocket.svg';
 import thumbs from './thumbs-up.svg';
 import close from './close.svg';
-export { rocket, thumbs, close };
+import instagram from './instagram.svg';
+import linkedln from './linkedln.svg';
+export { rocket, thumbs, close, instagram, linkedln };
