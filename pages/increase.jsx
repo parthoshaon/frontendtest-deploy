@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
-import { Navbar } from '../components';
+import { Navbar, Status } from '../components';
 const data = ["Exceptional Data Analyst", "Promising Data Analyst","Exceptional Data Scientist","Promising Data Scientist","Exceptional Visual Designer","Promising Visual Desiner","Exceptional Devops Expert","Exceptional Data Analyst","Exceptional Data Analyst","Promising Data Analst", "Exceptional Data Scientist","Promising Data Scientist","Exceptional Visual Designer","Promising Visual Designer","Exceptional DevOps Expert","Exceptional Data Analyst"]
 const voting = () => {
   const [state, setState] = useState(false);
@@ -13,7 +13,8 @@ const voting = () => {
 }, [])
   return (
     <>
-    <Navbar  loggedIn={state}/>
+      <Navbar loggedIn={state} />
+      <Status />
     <div className="bg-[#1F0231] w-full h-fit flex items-center p-12">
       <div className="bg-white m-auto flex flex-col text-center p-10 gap-2 w-11/12 rounded">
           <h1 className="text-center lg:text-3xl text-xl font-medium text-[#0c0114]">Increase Your Voting Power</h1>
