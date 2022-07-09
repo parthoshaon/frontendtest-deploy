@@ -14,7 +14,6 @@ const voting = () => {
   return (
     <>
       <Navbar loggedIn={state} />
-      <Status />
     <div className="bg-[#1F0231] w-full h-fit flex items-center p-12">
       <div className="bg-white m-auto flex flex-col text-center p-10 gap-2 w-11/12 rounded">
           <h1 className="text-center lg:text-3xl text-xl font-medium text-[#0c0114]">Increase Your Voting Power</h1>
