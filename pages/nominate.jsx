@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { facebook, twitter, instagram, linkedln } from "../public";
+import Image from "next/image";
 const signin = () => {
     const router = useRouter();
     const [firerror, setFirError] = useState(false);
@@ -77,16 +79,15 @@ const signin = () => {
                         </select><label className={`${gendererror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} text-xs peer-focus:text-base font-semibold cursor-pointer`} htmlFor="gender">Gender</label></span>
                     
                     <span className="flex flex-col-reverse text-left gap-2 w-full">{firerror && <p className="text-xs text-red-400">Please enter your full name</p>}<input ref={firstNameEl} name="fullname" id="fullname" type="text" className={`peer outline-none ring-2 ${firerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`} /><label className={`${firerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="fullname">Full Name</label></span>
-                    <span>
+                    <span className="flex flex-col gap-8">
                         <h1 className="text-left font-bold">Social Media Links</h1>
-                        <span><label></label><input type="text" /></span>
-                        <span></span>
+                        <span className="flex items-center w-full gap-6"><label className="flex items-center gap-2 basis-1/4"><div className="w-8 h-8 block"><Image src={linkedln} layout="responsive" /></div><span>Linkedln</span></label><input type="text" className={`peer outline-none ring-2 ${firerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm basis-3/4`} /></span>
+                        <span className="flex items-center w-full gap-6"><label className="flex items-center gap-2 basis-1/4"><div className="w-8 h-8 block"><Image src={instagram} layout="responsive" /></div><span>Instagram</span></label><input type="text" className={`peer outline-none ring-2 ${firerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm  basis-3/4`} /></span>
+                        <span className="flex items-center w-full gap-6"><label className="flex items-center gap-2 basis-1/4"><div className="w-8 h-8 block"><Image src={twitter} layout="responsive" /></div><span>Twitter</span></label><input type="text" className={`peer outline-none ring-2 ${firerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm  basis-3/4`} /></span>
+                        <span className="flex items-center w-full gap-6"><label className="flex items-center gap-2 basis-1/4"><div className="w-8 h-8 block"><Image src={facebook} layout="responsive" /></div><span>Facebook</span></label><input type="text" className={`peer outline-none ring-2 ${firerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm basis-3/4`} /></span>
                     </span>
-                        <span className="flex flex-col-reverse text-left gap-2">{emerror && <p className="text-xs text-red-400">Invalid email address</p>}<input ref={emailEl} type="email" name="email" id="email" className={`peer outline-none ring-2 ${emerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`} /><label className={`${emerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="email">Email Address</label></span>
-                    <span className="flex flex-col-reverse text-left gap-2">{phoneerror && <p className="text-xs text-red-400">Invalid phone number</p>}<input ref={phoneEl} type="tel" name="phone" id="phone" className={`peer outline-none ring-2 ${phoneerror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`} /><label className={`${phoneerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="phone">Phone Number</label></span>
-                    <span className="flex flex-col-reverse text-left gap-2 group">{passworderror && <p className="text-xs text-red-400">Password must be more than 7 characters</p>}<input ref={passwordEl} type="password" name="password" id="password" className={`peer outline-none ring-2 ${passworderror ? `focus:ring-red-500 ring-red-200` : `ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`} /><label className={`${passworderror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="password">Set Password</label></span>
-                    
-                    <span className="text-sm">By registering you agree to Tech trend Africa's <Link href="/terms"><span className="text-[#FA9706] cursor-pointer">Terms of Use</span></Link> and <Link href="/terms"><span className="text-[#FA9706] cursor-pointer">Privacy Policy</span></Link></span>
+                    <p>The First-Ever Tech Personality Awards Recognizing Promising and Exceptional African Talents in all Technological Fields. The West African Countries include 16 countries of Benin, Burkina Faso, Gambia, Ghana, Guinea, Guinea-Bissau, Ivory Coast, Liberia, Mali, Mauritania, Niger, Nigeria, Senegal, Sierra Leone, and Togo</p>
+                        <p>For questions, partnerships & enquiries, send us a mail via connectedawards@gmail.com</p>
                     <span className="w-full p-3 bg-[#3E0563] text-[#EEE8F2] hover:text-[#3E0563] hover:bg-[#EEE8F2] rounded transition-all duration-500 ease-in cursor-pointer" onClick={handleSubmission}>Create account</span>
                 </span>
             </div>
