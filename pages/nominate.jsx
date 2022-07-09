@@ -11,7 +11,7 @@ const signin = () => {
     const [instagramerror, setInstagramerror] = useState(false);
     const [linkedlnerror, setLinkedlnerror] = useState(false);
     const [twittererror, setTwittererror] = useState(false);
-    const [popUp, setPopUp] = useState(true);
+    const [popUp, setPopUp] = useState(false);
     const fullNameEl = useRef();
     const awardEl = useRef();
     const facebookEl = useRef();
@@ -19,12 +19,12 @@ const signin = () => {
     const linkedlnEl = useRef();
     const twitterEl = useRef();
     const handleSubmission = () => {
-        setFulNameError(true);
-        setAwardError(true);
-        setFacebookerror(true);
-        setInstagramerror(true);
-        setLinkedlnerror(true);
-        setTwittererror(true); 
+        setFulNameError(false);
+        setAwardError(false);
+        setFacebookerror(false);
+        setInstagramerror(false);
+        setLinkedlnerror(false);
+        setTwittererror(false); 
         const { value: fullname } = fullNameEl.current;
         const { value: award } = awardEl.current;
         const { value: facebook } = facebookEl.current;
@@ -52,24 +52,22 @@ const signin = () => {
             }
             return;
         }
-        return setPopUp(true);
-
+            return setPopUp(true);
     }
     return (
         <>
-        <div className={`${popUp ? `flex transition-[display] duration-500 ease-in` : `hidden transition-[display] duration-500 ease-out`} flex-col items-center my-auto align-middle`}>
+        <div className={`${popUp ? `flex transition-[display] duration-500 ease-in` : `hidden transition-[display] duration-500 ease-out`} flex-col items-center`}>
           <div className="inset-0 bg-black/70 w-full h-full fixed z-30"></div>
-        <div onBlur={() => setPopUp(false)} tabIndex={90}  className="fixed z-40 bg-white lg:w-2/5 w-4/5 h-auto p-10 flex flex-col items-center rounded shadow-sm gap-8">
+        <div onBlur={() => setPopUp(false)} tabIndex={90}  className="fixed z-40 bg-white lg:w-2/5 w-4/5 h-fit p-10 flex flex-col items-center rounded shadow-sm gap-8 inset-y-1/4">
             <div className="float-right ml-auto cursor-pointer"
               onClick={() => setPopUp(false)}
             ><Image src={close} width="24px" height="24px" /> </div>
             <Image src={thumbs} width="96px" height="96px" />
             <h1 className="text-3xl text-[#3E0563] tracking-wider font-bold">Awesome!</h1>
             <span className="text-center">
-            <p>You have successfully Increased your voting power.</p>
-            <p>Go and make your favorite candidate win!</p>
+            <p>Your Nomination have been submitted</p>
             </span>
-            <span className="lg:p-3 p-2 bg-[#3E0563] text-white text-sm font-bold rounded lg:px-8 px-4 tracking-wider"><Link href="/voting">Return to voting page</Link></span>
+                    <span className="lg:p-4 lp:px-6 p-2 text-[#EEE8F2] hover:bg-[#EEE8F2]  bg-[#3E0563] hover:text-[#3E0563] cursor-pointer text-sm w-full text-center font-bold rounded lg:px-8 px-4 tracking-wider transition duration-500 ease-in-out"><Link href="/">Return to homepage</Link></span>
           </div>
         </div>
         <div className="bg-[#1F0231] w-full h-fit flex items-center lg:p-12 p-4">
