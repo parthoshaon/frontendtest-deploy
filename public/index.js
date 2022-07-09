@@ -1,2 +1,4 @@
-export { default as rainbow } from './rainbow.svg';
-export { default as ribbon} from './ribbon.svg';
+import rocket from './rocket.svg';
+import thumbs from './thumbs-up.svg';
+import close from './close.svg';
+export { rocket, thumbs, close };
