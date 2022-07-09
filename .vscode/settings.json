@@ -1,3 +1,17 @@
 {
-  "cSpell.words": ["futureeditions"]
+
+  "cSpell.words": [
+    "emerror",
+    "firerror",
+    "firstname",
+    "futureeditions",
+    "gendererror",
+    "lasterror",
+    "lastname",
+    "passworderror",
+    "phoneerror",
+    "setgenError",
+    "setpassError",
+    "signin"
+  ]
 }
