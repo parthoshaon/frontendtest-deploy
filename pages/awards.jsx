@@ -5,8 +5,7 @@ import image from '../public/images3.png';
 import i22 from '../public/images2.png';
 import { Navbar } from '../components';
 
-
-
+const imgArr = [ 1,2,3,4,5,6,7,8,9]
 const awards = () => {
     const [state, setState] = useState(false);
     const parser = (arg) =>{
@@ -31,6 +30,13 @@ const awards = () => {
               </div>
               <div className="w-full h-auto block lg:p-12 p-6"><Image src={i22} layout="responsive"/></div>
         </div>
+        </div>
+        <div>
+          <h1 className="text-center lg:text-3xl text-xl font-medium text-[#0c0114]">Photo Gallery</h1>
+          <p className="text-center lg:text-xl text-lg font-medium text-[#808080]">Our collage of photos and memories from notable events</p>
+          <div className="flex flex-row w-full flex-wrap justify-around p-8">
+            {imgArr.map((val) => <div className="lg:basis-[30%] basis-full my-5 h-64 bg-[#D1D1D6]"></div>)}
+          </div>
         </div>
         </>
       )
