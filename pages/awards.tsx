@@ -8,7 +8,7 @@ import { Navbar } from '../components';
 const imgArr = [ 1,2,3,4,5,6,7,8,9]
 const awards = () => {
     const [state, setState] = useState(false);
-    const parser = (arg) =>{
+    const parser = (arg:string):string =>{
       var string  = arg?.replace(' ','-');
       return arg?.indexOf(' ') > -1 ? parser(string) : string?.toLowerCase();
     }
