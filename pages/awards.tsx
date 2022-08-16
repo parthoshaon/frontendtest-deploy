@@ -4,9 +4,10 @@ import Link from 'next/link';
 import image from '../public/images3.png';
 import i22 from '../public/images2.png';
 import { Navbar } from '../components';
+import { NextPage } from "next";
 
 const imgArr = [ 1,2,3,4,5,6,7,8,9]
-const awards = () => {
+const awards:NextPage = () => {
     const [state, setState] = useState(false);
     const parser = (arg:string):string =>{
       var string  = arg?.replace(' ','-');
