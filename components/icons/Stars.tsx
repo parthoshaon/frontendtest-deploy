@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Stars = () => {
+const Stars:FC = () => {
   return (
       <svg width="176" height="80" viewBox="0 0 176 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_1_11209)">
