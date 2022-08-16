@@ -36,7 +36,7 @@ const awards:NextPage = () => {
           <h1 className="text-center lg:text-3xl text-xl font-medium text-[#0c0114]">Photo Gallery</h1>
           <p className="text-center lg:text-xl text-lg font-medium text-[#808080]">Our collage of photos and memories from notable events</p>
           <div className="flex flex-row w-full flex-wrap justify-around p-8">
-            {imgArr.map((val) => <div className="lg:basis-[30%] basis-full my-5 h-64 bg-[#D1D1D6]"></div>)}
+            {imgArr.map(() => <div className="lg:basis-[30%] basis-full my-5 h-64 bg-[#D1D1D6]"></div>)}
           </div>
         </div>
         </>
