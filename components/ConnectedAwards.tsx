@@ -56,7 +56,7 @@ const ConnectedAwards:FC = () => {
               <div className="w-full h-auto lg:p-12 p-6 grid grid-rows-2 gap-8">
               <div className="w-full h-auto  grid grid-cols-2 gap-8 lg:p-0">
               {images.map((image:StaticImageData, i)=>(
-                  <div className="w-full h-auto block p-0 m-0" key={Id + i + '0'}><Image src={image} layout="responsive"/></div>
+                  <div className="w-full h-auto block p-0 m-0" key={i + Id}><Image src={image} layout="responsive"/></div>
                   ))
                 }
                 </div>
