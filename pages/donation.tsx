@@ -3,10 +3,8 @@ import Image from 'next/image';
 import image from '../public/images1.png';
 import i22 from '../public/TUTN.png';
 import { Navbar } from '../components';
-
-
-
-const donation = () => {
+import { NextPage } from "next";
+const donation:NextPage = () => {
     const [state, setState] = useState(false);
     useEffect(() => {
       return window.localStorage.getItem('name') ? setState(true) : setState(false);
