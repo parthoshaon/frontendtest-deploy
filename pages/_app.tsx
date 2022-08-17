@@ -15,8 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
                       <meta property="og:image:width" content="1200" />
                         <meta property="og:image:height" content="600" />
                           <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta property="og:description" content="An URL Shortener Built To simplify Things." />
-                            <meta property="og:title" content="Brief" />
+        <meta property="og:description" content="A site for the connected awards" />
+                            <meta property="og:title" content="The connected awards" />
     <title>The Connected Awards</title>
         <link rel="shortcut icon" href="/rainbow.ico" />
     </Head>
