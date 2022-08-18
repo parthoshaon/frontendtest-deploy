@@ -4,7 +4,7 @@ import { Navbar } from '../components';
 const data = ["Exceptional Data Analyst", "Promising Data Analyst","Exceptional Data Scientist","Promising Data Scientist","Exceptional Visual Designer","Promising Visual Designer","Exceptional Devops Expert","Exceptional Data Analyst","Exceptional Data Analyst","Promising Data Analyst", "Exceptional Data Scientist","Promising Data Scientist","Exceptional Visual Designer","Promising Visual Designer","Exceptional DevOps Expert","Exceptional Data Analyst"]
 const voting = () => {
   const [state, setState] = useState(false);
-  const parser = (arg) =>{
+  const parser = (arg:string):string =>{
     var string  = arg?.replace(' ','-');
     return arg?.indexOf(' ') > -1 ? parser(string) : string?.toLowerCase();
   }
