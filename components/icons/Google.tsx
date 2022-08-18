@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-const Google:FC = (props) => {
+const Google:FC<{className: string}> = (props) => {
   return (
       <svg {...props} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3.5108 6.50969C4.13252 4.62575 5.90297 3.27273 8 3.27273C9.12727 3.27273 10.1455 3.67273 10.9455 4.32727L13.2727 2C11.8545 0.763636 10.0364 0 8 0C4.84671 0 2.13183 1.79887 0.82666 4.43335L3.5108 6.50969Z" fill="#EA4335" />
