@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Twitter = () => {
+const Twitter:FC<{className: string}> = (props) => {
   return (
-      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      <svg {...props} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
           viewBox="0 0 112.197 112.197">
           <g>
               <circle style={{fill:"#55ACEE"}} cx="56.099" cy="56.098" r="56.098" />
