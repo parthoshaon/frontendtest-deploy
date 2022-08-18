@@ -2,9 +2,9 @@ import Image from "next/image"
 import React, { FC } from 'react'
 import { logo } from "../../public"
 
-const Logo:FC = () => {
+const Logo:FC = (props) => {
   return (
-   <span  ><Image src={logo} layout="responsive" /></span>
+   <span {...props}  ><Image src={logo} layout="responsive" /></span>
   )
 }
 
