@@ -2,6 +2,7 @@ import React, {useState, useEffect, FC, useId} from 'react'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Logo } from "./icons";
+import { signOut } from "next-auth/react"
 type Links = {
   text: string;
   link: string,
@@ -28,7 +29,7 @@ const Navbar: FC<{ loggedIn: boolean }> = ({ loggedIn }) => {
     </div>
     {!loggedIn ? <span className="flex-col flex lg:flex-row gap-6 lg:ml-auto align-middle my-auto z-10 w-fit">
       <Link href="/login"><span className="bg-[#EEE8F2] hover:text-[#EEE8F2] p-3 rounded text-[#3E0563] hover:bg-[#3E0563] cursor-pointer transition-all duration-500 w-fit ease-in">Log in</span></Link>
-      <Link href="/signin"><span className="text-[#EEE8F2] hover:bg-[#EEE8F2] p-3 rounded bg-[#3E0563] hover:text-[#3E0563] cursor-pointer transition-all duration-500 w-fit ease-in">Create Account</span></Link>
+          <span onClick={() => signOut({ redirect: false, callbackUrl: "/" })} className="text-[#EEE8F2] hover:bg-[#EEE8F2] p-3 rounded bg-[#3E0563] hover:text-[#3E0563] cursor-pointer transition-all duration-500 w-fit ease-in">Sign Out</span>
     </span> :
     <span  className="flex-col flex lg:flex-row gap-6 lg:ml-auto align-middle my-auto z-10 w-fit">
       <span className="flex gap-2 align-middle my-auto"><svg className="w-5 h-5" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
