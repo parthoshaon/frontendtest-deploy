@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-const LinkedIn:FC = (props) => {
+const LinkedIn: FC<{ className: string }> = (props) => {
   return (
 	  <svg {...props} version="1.1"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 			viewBox="0 0 112.196 112.196" >
