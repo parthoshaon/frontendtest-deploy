@@ -1,12 +1,15 @@
 import React,{useEffect, useState, useRef} from 'react';
 import { useRouter } from 'next/router';
-import {Google, LinkedIn, Facebook, Twitter, Github} from "../components/icons";
+import { Google, LinkedIn, Facebook, Twitter, Github } from "../components/icons";
+import { useSession, signIn , signOut } from "next-auth/react";
 import Link from 'next/link';
 const login = () => {
+  const { data: session, status } = useSession();
 const router = useRouter();
   const [emerror,setEmError]=useState<boolean>(false);
   const [passworderror,setpassError]=useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
+  const { push } = useRouter();
   const [password, setPassword] = useState<string>("");
   useEffect(() => {
     setEmail(window.localStorage.getItem('email') ?? "");
@@ -26,7 +29,14 @@ if(!email || !password ||   email.indexOf("@") < 0 || password.length < 8){
 return;
 }
 return router.push('/')
-}
+  }
+  if (status == 'loading') return <div className="flex items-center justify-center min-h-screen flex-col gap-4"><div className="w-28 h-12 border-l-4 rounded absolute animate-spin border-light"></div><div className="font-black tracking-widest text-center animate-bounce text-light text-4xl shadow">Brief</div></div>;
+  if (session) {
+    setTimeout(() => {
+      push('/')
+    }, 5000);
+    return <div className="flex items-center justify-center min-h-screen flex-col gap-4"><div className="w-28 h-12 border-l-4 rounded absolute animate-spin border-light"></div><div className="font-black tracking-widest text-center animate-bounce text-light text-4xl shadow">Brief</div></div>;
+  }
   return (
     <div className="bg-[#1F0231] w-full h-fit flex items-center lg:p-12 p-4">
     <div className="bg-white m-auto flex flex-col text-center p-10 lg:w-1/2 w-full gap-2">
@@ -42,11 +52,11 @@ return router.push('/')
 </span>
         <span className="flex text-[#A6A6A6] w-full gap-3"><div className="w-full h-1 rounded-full bg-[#DCDCDC] my-auto align-middle"></div> OR <div className="w-full h-1 rounded-full bg-[#DCDCDC] my-auto align-middle"></div></span>
 
-        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2"><Google className="w-6 h-6" />Continue with Google</span>
-        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2"><LinkedIn className="w-6 h-6" />Continue with LinkedIn</span>
-        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2"><Facebook className="w-6 h-6" />Continue with Facebook</span>
-        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2"><Twitter className="w-6 h-6" />Continue with Twitter</span>
-        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2"><Github className="w-6 h-6" />Continue with Github</span>
+        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('google')}><Google className="w-6 h-6" />Continue with Google</span>
+        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('linkedin')}><LinkedIn className="w-6 h-6" />Continue with LinkedIn</span>
+        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('facebook')}><Facebook className="w-6 h-6" />Continue with Facebook</span>
+        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('twitter')}><Twitter className="w-6 h-6" />Continue with Twitter</span>
+        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('github')}><Github className="w-6 h-6" />Continue with Github</span>
     </div>
     </div>
   )
