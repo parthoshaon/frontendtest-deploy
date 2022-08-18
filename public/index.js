@@ -5,4 +5,5 @@ import instagram from './instagram.svg';
 import linkedln from './linkedln.svg';
 import facebook from './facebook.svg';
 import twitter from './twitter.svg';
-export { rocket, thumbs, close, instagram, linkedln, facebook, twitter };
+import logo from './logo.svg';
+export { rocket, thumbs, close, instagram, linkedln, facebook, twitter, logo };
