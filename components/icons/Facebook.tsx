@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react';
 
-const Facebook = () => {
+const Facebook:FC = (props) => {
   return (
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      <svg {...props} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
           viewBox="0 0 291.319 291.319">
           <g>
               <path style={{fill:"#3B5998"}} d="M145.659,0c80.45,0,145.66,65.219,145.66,145.66c0,80.45-65.21,145.659-145.66,145.659
