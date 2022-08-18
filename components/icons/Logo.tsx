@@ -4,7 +4,7 @@ import { logo } from "../../public"
 
 const Logo: FC<{ className: string}> = (props) => {
   return (
-   <span {...props}  ><Image src={logo} layout="responsive" /></span>
+   <span {...props}><Image src={logo} layout="responsive" /></span>
   )
 }
 
