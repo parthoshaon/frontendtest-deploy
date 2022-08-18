@@ -4,9 +4,11 @@ import 'aos/dist/aos.css';
 import Head from 'next/head'
 import Image from 'next/image'
 import { Navbar,Hero,Features, ConnectedAwards, CTA, Footer } from '../components';
+import { useSession } from "next-auth/react";
 const Home = () => {
   const [state, setState] = useState(false);
-  
+  const sessioner = useSession();
+  console.log(sessioner);
   useEffect(() => {
     AOS.init({
       // Global settings:
