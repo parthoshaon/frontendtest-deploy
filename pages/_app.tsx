@@ -1,10 +1,13 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
+import { SessionProvider } from "next-auth/react";
+
 import Head from "next/head"
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+
   return (
-  <>
+    <SessionProvider session={session}>
    <Head>
      <meta name="author" content="Onyela Udochukwuka" />
         <meta name="description" content="A site for the connected awards" />
@@ -21,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/rainbow.ico" />
     </Head>
   <Component {...pageProps} />
-  </>)
+    </ SessionProvider>)
 }
 
 export default MyApp
