@@ -33,7 +33,7 @@ return router.push('/')
       <h1><span className="font-bold text-xl w-1/2 mx-auto">Let's pick up where we left off yeah!</span></h1>
       <h4><span className="font-bold text-lg">Log in to your account</span></h4>
       <span>Don't have an account?<Link href="/signin"><span className="text-[#FA9706] cursor-pointer">Sign Up</span></Link></span>
-      <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto p-3 flex items-center justify-center cursor-pointer"><Google className="w-6 h-6"/>Continue with google</span>
+      <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto p-3 flex items-center justify-center cursor-pointer gap-1"><Google className="w-6 h-6"/>Continue with google</span>
 <span className="flex text-[#A6A6A6] w-full gap-3"><div className="w-full h-1 rounded-full bg-[#DCDCDC] my-auto align-middle"></div> OR <div className="w-full h-1 rounded-full bg-[#DCDCDC] my-auto align-middle"></div></span>
 <span className="flex flex-col gap-8 w-full">
 <span className="flex flex-col-reverse text-left gap-2">{emerror && <p className="text-xs text-red-400">Invalid email address</p>}<input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" name="email" id="email"className={`peer outline-none ring-2 ${emerror? `focus:ring-red-500 ring-red-200` :`ring-[#DCDCDC] focus:ring-gray-300`} p-2 text-gray-500 rounded-sm`}/><label className={`${emerror ? `text-red-200 peer-focus:text-red-500` : `text-[#0c0114]`} peer-focus:text-base text-xs font-semibold cursor-pointer`} htmlFor="email">Email Address</label></span>

@@ -6,7 +6,7 @@ import Image from "next/image";
 const voting = () => {
   const [state, setState] = useState(false);
   const [popUp, setPopUp] = useState(false);
-  const parser = (arg) =>{
+  const parser = (arg:string):string =>{
     var string  = arg?.replace(' ','-');
     return arg?.indexOf(' ') > -1 ? parser(string) : string?.toLowerCase();
   }
