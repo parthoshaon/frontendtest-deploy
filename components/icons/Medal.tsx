@@ -1,6 +1,6 @@
 import React, { ComponentProps, FC } from 'react'
 
-const Medal:FC = (props:ComponentProps<any>) => {
+const Medal: FC<{ className: string }> = (props) => {
   return (
       <svg {...props} width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M27.9551 49.245V80L40.9776 65.895L53.1301 79.79V48.74" fill="#3E0563" />
