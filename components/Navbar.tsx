@@ -29,7 +29,6 @@ const Navbar: FC<{ loggedIn: boolean }> = ({ loggedIn }) => {
     </div>
     {!loggedIn ? <span className="flex-col flex lg:flex-row gap-6 lg:ml-auto align-middle my-auto z-10 w-fit">
       <Link href="/login"><span className="bg-[#EEE8F2] hover:text-[#EEE8F2] p-3 rounded text-[#3E0563] hover:bg-[#3E0563] cursor-pointer transition-all duration-500 w-fit ease-in">Log in</span></Link>
-          <span onClick={() => signOut({ redirect: false, callbackUrl: "/" })} className="text-[#EEE8F2] hover:bg-[#EEE8F2] p-3 rounded bg-[#3E0563] hover:text-[#3E0563] cursor-pointer transition-all duration-500 w-fit ease-in">Sign Out</span>
     </span> :
     <span  className="flex-col flex lg:flex-row gap-6 lg:ml-auto align-middle my-auto z-10 w-fit">
       <span className="flex gap-2 align-middle my-auto"><svg className="w-5 h-5" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,10 +48,8 @@ const Navbar: FC<{ loggedIn: boolean }> = ({ loggedIn }) => {
 <path d="M11.3333 6.66666L7.99996 10L4.66663 6.66666" stroke="#0C0114" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 < span className={`${!log? `top-[-500%] ease-out hidden lg:flex` : `flex top-16 h-fit w-max  py-12`} transition-all ease-in duration-1000 lg:absolute bg-[#3E0563] text-white`}>
-                  <span className="border-y py-3 px-12 hover:px-10 w-fit flex hover:text-[#3E0563] hover:bg-white group" onClick={()=>{
-                    window.localStorage.clear();
-                    return router.reload();
-                  }}>
+                  <span className="border-y py-3 px-12 hover:px-10 w-fit flex hover:text-[#3E0563] hover:bg-white group" onClick={() => signOut({ redirect: false, callbackUrl: "/" })}
+                  >
                 <svg className="w-4 h-4 my-auto align-middle group-hover:mr-4 transition-all ease-in duration-1000" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.38574 15.5H3.38574C2.55731 15.5 1.88574 14.8285 1.88574 14V5C1.88574 4.17157 2.55731 3.5 3.38574 3.5H6.38574V5H3.38574V14H6.38574V15.5Z" className="fill-white group-hover:fill-[#3E0563]"/>
 <path d="M10.3813 13.5388L11.4465 12.4826L8.50709 9.51817H15.3643C15.7785 9.51817 16.1143 9.18239 16.1143 8.76817C16.1143 8.35395 15.7785 8.01817 15.3643 8.01817H8.49269L11.478 5.05807L10.4218 3.99292L5.62866 8.74559L10.3813 13.5388Z" className="fill-white group-hover:fill-[#3E0563]"/>
