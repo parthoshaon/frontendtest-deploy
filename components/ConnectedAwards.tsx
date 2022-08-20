@@ -19,10 +19,7 @@ const ConnectedAwards:FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="w-full h-auto block lg:p-12 p-6"><Image src={image} layout="responsive"/></div>
               <div className="w-full lg:p-12 p-6 flex flex-col gap-6 lg:pr-0 pr-0">
-                <span className="flex flex-col gap-4">
-                    <h1 className="text-xl lg:text-4xl font-bold">The Connected Awards</h1>
-                    <div className="w-24 h-1 bg-[#FA9706] rounded-full ml-1"></div>
-                </span>
+                    <h1 className="text-xl lg:text-4xl font-bold relative after:w-36 after:h-1.5 after:bg-[#FA9706] after:rounded-full after:left-1 after:bottom-0 after:absolute">The Connected Awards</h1>
                 <p className="leading-6 font-semibold text-base lg:w-9/12 lg:p-0 pr-6 w-full">The connected is.....It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
 
                 <Link href="/awards"><span className="w-fit text-[#EEE8F2] hover:bg-[#EEE8F2] py-3 px-6 rounded bg-[#3E0563] hover:text-[#3E0563] cursor-pointer transition-all duration-500 ease-in">Learn more</span></Link>
