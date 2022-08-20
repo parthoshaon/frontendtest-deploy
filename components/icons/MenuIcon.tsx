@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react';
 
-const MenuIcon = (props) => {
+const MenuIcon:FC<{className?: string}> = (props) => {
   return (
     <div>MenuIcon</div>
   )
