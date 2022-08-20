@@ -10,3 +10,4 @@ export { default as Twitter } from "./Twitter";
 export { default as Logo } from "./Logo";
 export { default as Arrow } from "./Arrow";
 export { default as MenuIcon } from "./MenuIcon";
+export { default as Search } from "./Search";
