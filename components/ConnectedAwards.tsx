@@ -6,12 +6,13 @@ import i11 from '../public/images4.png';
 import i12 from '../public/images5.png';
 import i21 from '../public/images6.png';
 import i22 from '../public/techTrendAward.png';
+import { Props } from "../typescript";
 
 const images = [i11, i12];
 const images2 =[i21, i22];
 
 
-const ConnectedAwards:FC = () => {
+const ConnectedAwards:FC<Props> = () => {
   const Id = useId();
   
     return (
