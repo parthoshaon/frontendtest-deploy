@@ -20,7 +20,7 @@ const Navbar: FC<{ loggedIn: boolean }> = ({ loggedIn }) => {
   },[])
   return (
       <div className="bg-white p-4 border-b-[1px] sticky flex gap-14 font-bold px-14  top-0 z-20 w-full">
-      <Logo className="w-24 h-auto"/>
+      <Logo className="w-24 h-auto cursor-pointer"/>
 <div className={`${!drop? `top-[-500%] ease-out` : `flex top-24 h-[90vh] inset-0 right-0 p-12 w-[calc(96.5vw)]`} transition-all ease-in duration-1000 lg:flex lg:flex-row flex-col w-4/5 lg:relative lg:top-0 absolute bg-white z-10  lg:h-fit lg:w-full lg:p-0 lg:my-auto lg:align-middle lg:ml-auto`}>
 <div className="flex flex-col lg:flex-row gap-10 align-middle my-auto z-10 lg:mx-auto">
          {links.map(({link,text}:Links, i)=>(
