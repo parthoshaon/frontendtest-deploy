@@ -1,10 +1,6 @@
-import React, { Component, ComponentType, FC, ReactNode, useId } from 'react';
+import React, { FC, ReactNode, useId } from 'react';
 import { Medal, Star, Stars } from "./icons";
-type Content = {
-    icon: ReactNode,
-    header: string,
-    text: string
-}
+import { Content, Props } from "../typescript";
 const content:Content[] = [
     {
         icon: <Medal />,
@@ -21,7 +17,7 @@ const content:Content[] = [
         text: "Exceptional Talent is an individual with more than 5 years experience in Nigeria technology ecosystem. Such individual are well recognized in their field for impacting with their skills."
     }
 ];
-const CTA = () => {
+const CTA:FC<Props> = () => {
     const Id = useId();
   return (
     <div className="grid text-[#0c0114] p-6 gap-8 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
