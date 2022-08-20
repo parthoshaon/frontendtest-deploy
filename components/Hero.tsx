@@ -1,8 +1,16 @@
 import React from 'react'
 import Link from 'next/link';
+import { motion } from "framer-motion";
 const Hero = () => {
+  const { div: Div } = motion;
   return (
-      <div className="flex flex-col items-center content w-full">
+      <Div
+      initial={{
+        y: "-100vw"
+      }}
+      animate={{ y: 0 }}
+      transition={{delay: 0, type: "spring", stiffness: 120 }}
+       className="flex flex-col items-center content w-full">
           <h1 className="text-center lg:text-7xl text-3xl font-medium w-4/5 text-[#0c0114]">First Ever Tech Personality Award For Africans in West Africa</h1>
           <div className="lg:w-1/2 w-4/5 flex items-center mx-auto mt-8 gap-6">
             <label className="w-full relative block mx-auto">
@@ -20,7 +28,7 @@ const Hero = () => {
 <path d="M21 12H20" stroke="#0C0114" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 </span></span></Link>
-    </div>
+    </Div>
   )
 }
 
