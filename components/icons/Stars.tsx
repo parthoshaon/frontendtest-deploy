@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
+import { IconProps } from "../../typescript"
 
-const Stars:FC<{className: string}> = (props) => {
+const Stars:FC<IconProps> = (props) => {
   return (
       <svg {...props} width="176" height="80" viewBox="0 0 176 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_1_11209)">
