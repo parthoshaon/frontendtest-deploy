@@ -7,8 +7,8 @@ type Heading = {
 }
 const SearchBar:FC<PropTypes<Props, Heading>> = ({heading}) => {
   return (
-    <div>
-          <h1 className="text-center lg:text-7xl text-3xl font-medium w-4/5 text-[#0c0114]">{heading}</h1>
+    <div className="w-full">
+          <h1 className="text-center lg:text-7xl text-3xl font-medium w-4/5 text-[#0c0114] mx-auto">{heading}</h1>
           <div className="lg:w-1/2 w-4/5 flex items-center mx-auto mt-8 gap-6">
             <label className="w-full relative block mx-auto">
               <span className="absolute inset-y-0 left-2 flex items-center pl-2"><Search  className="h-5 w-5"/></span>
