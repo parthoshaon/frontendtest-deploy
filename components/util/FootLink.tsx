@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
-
-const FootLink:FC = () => {
+import Link from 'next/link';
+import { PropTypes, Props } from "../../typescript";
+type Text = {text: string};
+const FootLink:FC<PropTypes<Props, Text>> = ({text, ...props}) => {
   return (
-    <div>FootLink</div>
+    <Link href="/"><span {...props}>{text}</span></Link>
   )
 }
 
