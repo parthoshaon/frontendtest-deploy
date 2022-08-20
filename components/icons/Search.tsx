@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react';
 
 const Search:FC<{className: string}> = () => {
   return (
