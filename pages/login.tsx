@@ -1,6 +1,6 @@
 import React,{useEffect, useState, useRef} from 'react';
 import { useRouter } from 'next/router';
-import { Google, LinkedIn, Facebook, Twitter, Github } from "../components/icons";
+import { Google, Facebook, Twitter, Github } from "../components/icons";
 import { useSession, signIn , signOut } from "next-auth/react";
 import Link from 'next/link';
 const login = () => {
@@ -53,7 +53,7 @@ return router.push('/')
         <span className="flex text-[#A6A6A6] w-full gap-3"><div className="w-full h-1 rounded-full bg-[#DCDCDC] my-auto align-middle"></div> OR <div className="w-full h-1 rounded-full bg-[#DCDCDC] my-auto align-middle"></div></span>
 
         <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('google')}><Google className="w-6 h-6" />Continue with Google</span>
-        <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('linkedin')}><LinkedIn className="w-6 h-6" />Continue with LinkedIn</span>
+        {/* <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('linkedin')}><LinkedIn className="w-6 h-6" />Continue with LinkedIn</span> */}
         <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('facebook')}><Facebook className="w-6 h-6" />Continue with Facebook</span>
         <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('twitter')}><Twitter className="w-6 h-6" />Continue with Twitter</span>
         <span className=" bg-[#D8CDE0]/50 border border-[#D8CDE0] hover:bg-[#D8CDE0] hover:border-[#D8CDE0]/50 transition-all duration-500 ease-in w-full h-auto px-3 py-4 flex items-center justify-center cursor-pointer gap-2" onClick={() => signIn('github')}><Github className="w-6 h-6" />Continue with Github</span>
