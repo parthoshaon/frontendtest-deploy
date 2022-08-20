@@ -1,4 +1,5 @@
 import React from 'react';
+import { Props } from "../typescript";
 const feature = [
     {
         icon: <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +70,7 @@ const feature = [
         text: 'Recognition'        
     }
 ]
-const Features = () => {
+const Features:FC<Props> = () => {
   return (
       <div className="bg-[#1F0231] text-white flex flex-col items-center p-12">
           <h1 className="text-xl font-bold">Our Target</h1>
