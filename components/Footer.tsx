@@ -2,11 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import image from '../public/connectedAwards.png';
+import { Props } from "../typescript";
 const about = ["The Connected Magazine" ,"Past Edition","Celebrated Techies"];
 const legal = ["Terms Of Service" ,"Privacy Policy"];
 const social = ["Linkedin"];
 const contact = ["+23470572199571","Chat On Whatsapp"];
-const Footer = () => {
+const Footer:FC<Props> = () => {
   return (
     <div className="bg-[#1F0231] text-white flex flex-col items-center p-12 gap-20 w-full text-xs lg:text-base">
         <div className="grid  gap-4 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full">
