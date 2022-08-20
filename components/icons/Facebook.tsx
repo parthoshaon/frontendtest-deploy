@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IconProps } from "../../typescript"
+import type { IconProps } from "../../typescript"
 const Facebook: FC<IconProps> = (props) => {
   return (
       <svg {...props} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
