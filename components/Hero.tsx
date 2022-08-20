@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import { motion } from "framer-motion";
+import { Arrow } from "./icons";
 const Hero = () => {
   const { div: Div } = motion;
   return (
@@ -22,12 +23,11 @@ const Hero = () => {
 
                 <span className="p-4 text-[#EEE8F2] hover:bg-[#EEE8F2] bg-[#3E0563] hover:text-[#3E0563] transition-all duration-500 ease-in font-semibold rounded cursor-pointer">Search</span>
           </div>
-          <Link href="/voting" ><span className="font-semibold flex gap-4 mt-8 cursor-pointer text-[#0c0114] group group-hover:ml-4"><span  className="my-auto group-hover:ml-6 transition-all duration-500"> View all categories</span> <span className="my-auto group-hover:ml-4 transition-all duration-500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15 18L21 12L15 6" stroke="#0C0114" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M3 12H20" stroke="#0C0114" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M21 12H20" stroke="#0C0114" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-</span></span></Link>
+      <Link href="/voting" >
+        <span className="font-semibold flex gap-4 mt-8 cursor-pointer text-[#0c0114] group group-hover:ml-4"><span className="my-auto group-hover:ml-6 transition-all duration-500"> View all categories</span>
+        <Arrow className="my-auto group-hover:ml-4 transition-all duration-500 w-6 h-6" />
+        </span>
+        </Link>
     </Div>
   )
 }
