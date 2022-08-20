@@ -4,7 +4,7 @@ declare global {
         export interface IconProps {
             className?: string;
         }
-        export interface Props { }
+        export type Props<T > = T & { };
         export type PropTypes<T, P> = T & P;
         export type Content = {
     icon: ReactNode,
