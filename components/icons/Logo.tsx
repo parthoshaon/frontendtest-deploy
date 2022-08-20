@@ -5,7 +5,7 @@ import type { IconProps } from "../../typescript"
 import Link from 'next/link';
 const Logo: FC<IconProps> = (props) => {
   return (
-   <Link href="/" {...props}><Image src={logo} layout="responsive" /></Link>
+    <Link href="/" ><span {...props}><Image src={logo} layout="responsive" /></span></Link>
   )
 }
 
