@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 import { Navbar } from '../components';
-import { Arrow, MenuIcon } from "../components/icons";
+import { Arrow, MenuIcon, Search } from "../components/icons";
 import { motion } from "framer-motion";
 const data = ["Exceptional Data Analyst", "Promising Data Analyst","Exceptional Data Scientist","Promising Data Scientist","Exceptional Visual Designer","Promising Visual Designer","Exceptional Devops Expert","Exceptional Data Analyst","Exceptional Data Analyst","Promising Data Analyst", "Exceptional Data Scientist","Promising Data Scientist","Exceptional Visual Designer","Promising Visual Designer","Exceptional DevOps Expert","Exceptional Data Analyst"]
 const voting = () => {
@@ -21,7 +21,9 @@ const voting = () => {
           <h1 className="text-center lg:text-7xl text-3xl font-medium w-4/5 text-[#0c0114]">Voting Categories</h1>
           <div className="lg:w-1/2 w-4/5 flex items-center mx-auto mt-8 gap-6">
             <label className="w-full relative block mx-auto">
-                <span className="absolute inset-y-0 left-2 flex items-center pl-2"></span>
+            <span className="absolute inset-y-0 left-2 flex items-center pl-2">
+              <Search />
+                </span>
                   <input type="text" className="block bg-white w-full py-2 pl-12 pr-3 shadow-sm outline-none border h-[auto] align-middle my-auto rounded-md" placeholder="Nominee's Name, Nominee's Category"/>
                 </label>
 
