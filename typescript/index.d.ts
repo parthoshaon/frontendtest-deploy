@@ -1,6 +1,8 @@
-namespace Types {
-    export interface Props {
-        className?: string;
+declare global {
+    declare namespace Types {
+        export interface Props {
+            className?: string;
+        }
     }
 }
-export = {};
+export = Types;
