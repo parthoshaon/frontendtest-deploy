@@ -5,9 +5,9 @@ import type {PropTypes, Props} from "../../typescript";
 type Heading = {
   heading: string
 }
-const SearchBar:FC<PropTypes<Props, Heading>> = ({heading}) => {
+const SearchBar:FC<PropTypes<{className: string}, Heading>> = ({heading, ...props}) => {
   return (
-    <div className="w-full">
+    <div {...props}>
           <h1 className="text-center lg:text-7xl text-3xl font-medium w-4/5 text-[#0c0114] mx-auto">{heading}</h1>
           <div className="lg:w-1/2 w-4/5 flex items-center mx-auto mt-8 gap-6">
             <label className="w-full relative block mx-auto">
