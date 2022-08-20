@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { IconProps } from "../../typescript"
+import type { IconProps } from "../../typescript"
 
 const Twitter:FC<IconProps> = (props) => {
   return (
