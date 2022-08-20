@@ -1,7 +1,10 @@
 import React, { FC } from 'react'
 import {Search } from "../icons";
 import type {PropTypes, Props} from "../../typescript";
-//  First Ever Tech Personality Award For Africans in West Africa
+//  
+type Heading = {
+  heading: string
+}
 const SearchBar:FC<PropTypes<Props, Heading>> = ({heading}) => {
   return (
     <div>
