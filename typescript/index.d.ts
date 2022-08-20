@@ -1,6 +1,6 @@
 declare global {
     declare namespace Types {
-        export interface Props {
+        export interface IconProps {
             className?: string;
         }
     }
