@@ -5,7 +5,7 @@ import { NextPage } from "next";
 type Data = {
   name: string,
   role: string
-}
+}  
 const data :Data[]= [{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},{name:"Sarah Olalore",role:"Exceptional Visual Designer"},]
 const celebrated:NextPage = () => {
   const [state, setState] = useState<boolean>(false);
