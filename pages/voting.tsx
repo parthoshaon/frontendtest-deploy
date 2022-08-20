@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 import { Navbar } from '../components';
-import { Arrow } from "../components/icons";
+import { Arrow, MenuIcon } from "../components/icons";
 const data = ["Exceptional Data Analyst", "Promising Data Analyst","Exceptional Data Scientist","Promising Data Scientist","Exceptional Visual Designer","Promising Visual Designer","Exceptional Devops Expert","Exceptional Data Analyst","Exceptional Data Analyst","Promising Data Analyst", "Exceptional Data Scientist","Promising Data Scientist","Exceptional Visual Designer","Promising Visual Designer","Exceptional DevOps Expert","Exceptional Data Analyst"]
 const voting = () => {
   const [state, setState] = useState(false);
@@ -31,7 +31,7 @@ const voting = () => {
           {data.map((data,index)=>(
             <Link href={`/voting/${parser(data)}`} key={index}>
             <span className="flex items-center flex-col gap-6 p-6 shadow-xl hover:shadow-2xl group transition-all duration-500 ease-in cursor-pointer select-none">
-        
+              <MenuIcon />
               <span>{data}</span>
 <Arrow />
   </span>
