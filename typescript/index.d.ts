@@ -3,3 +3,4 @@ namespace Types {
         className?: string;
     }
 }
+export = {};
