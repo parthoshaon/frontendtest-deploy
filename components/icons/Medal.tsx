@@ -1,5 +1,5 @@
 import React, { ComponentProps, FC } from 'react'
-import { IconProps } from "../../typescript"
+import type { IconProps } from "../../typescript"
 
 const Medal: FC<IconProps> = (props) => {
   return (
